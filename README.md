@@ -38,6 +38,16 @@ yarn add redux react-redux
 
 ```
 
+#### AXIOS （由于自带的FETCH没有拦截器以及响应超市，所以选择使用第三方的AXIOS）
+```
+yarn add axios
+// npm install --save axios
+
+```
+
+
+
+
 
 > 2. 样式级别依赖
 
