@@ -16,7 +16,7 @@ npm run start
 
 ## 项目依赖
 
-> 1. 框架级别依赖
+> 1. 框架依赖
 
 #### react-navigation
 ```
@@ -47,9 +47,31 @@ yarn add axios
 
 
 
+***
 
 
-> 2. 样式级别依赖
+
+
+> 2. 组件依赖
+
+#### 引导页以及轮播组件
+```
+$ npm i react-native-swiper --save
+```
+
+
+
+***
+
+
+
+
+> 3. 样式依赖
+
+#### react-native-elements 第三方样式库
+```
+yarn add react-native-elements
+```
 
 #### 第三方图标库
 ```
