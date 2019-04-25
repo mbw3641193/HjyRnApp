@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, SafeAreaView, ScrollView ,AsyncStorage} from 'react-native';
 import { ThemeProvider, Button } from 'react-native-elements';
 import { connect } from 'react-redux';
-import action from '../store/action';
+import * as action from '../redux/actions';
 
 import Swiper from 'react-native-swiper';
 
@@ -45,35 +45,31 @@ class Welcome extends Component {
 
     goHome = () => {
         
-        if( this.props.home === 0 ){
-            this.props.gotoHome();
+            this.props.gotoHome(1);
+            
             // console.log(this.props.home);
-            AsyncStorage.setItem('mbw' , '123123') 
             this.props.navigation.navigate('Main');
 
-        }
         
     }
 
     componentWillMount(){
+        console.log(this.props);
         if( this.props.home === 1 ){
             // console.log(this.props.home);
             this.props.navigation.navigate('Main');
+            
         }
     }
 
     componentDidMount() {
-        console.log(this.props);
-        // setTimeout(()=>{
-        //     this.props.navigation.navigate('Main');
-        // },2000)
     }
 
     render() {
         return (
             <Swiper style={styles.wrapper} loop={false}>
                 <View style={styles.slide1}>
-                    <Text style={styles.text}>Hello Swiper</Text>
+                    <Text style={styles.text}>Hello Swiper{this.props.home}</Text>
                 </View>
                 <View style={styles.slide2}>
                     <Text style={styles.text}>Beautiful</Text>
@@ -98,5 +94,5 @@ class Welcome extends Component {
     }
 }
 
-export default connect(state => ({ ...state.reducer.welcome }), action.welcome)(Welcome);
+export default connect(state => ({ ...state.reducers }), action)(Welcome);
 

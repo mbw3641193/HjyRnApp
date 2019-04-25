@@ -3,9 +3,10 @@
  */
 import * as TYPE from '../action-types';
 let vote = {
-    gotoHome(){
+    gotoHome(homeNum){
         return {    //dispatch需要什么传递什么，这里就返回什么
-            type:TYPE.WELCOME_HOME
+            type:TYPE.WELCOME_HOME,
+            homeNum
         }
     },
 };
