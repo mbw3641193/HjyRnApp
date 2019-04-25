@@ -31,6 +31,17 @@ yarn add react-native-gesture-handler
 react-native link react-native-gesture-handler
 ```
 
+#### 为switch路由添加动画效果
+
+##### 这两个组件位于npm仓库，不在github托管
+```
+yarn add react-native-reanimated
+
+react-native link react-native-reanimated
+
+yarn add react-navigation-animated-switch
+```
+
 #### REDUX
 ```
 yarn add redux react-redux
@@ -78,4 +89,12 @@ yarn add react-native-elements
 yarn add react-native-vector-icons  
 
 react-native link react-native-vector-icons
+```
+
+
+## 特殊功能实现
+
+> 1. 引导页
+```
+npm install redux-persist --save
 ```

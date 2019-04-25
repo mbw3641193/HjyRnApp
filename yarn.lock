@@ -5041,6 +5041,11 @@ react-native-ratings@^6.3.0:
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
+react-native-reanimated@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/react-native-reanimated/download/react-native-reanimated-1.0.1.tgz#5ecb6a2f6dad0351077ac9b771ca943b7ad6feda"
+  integrity sha1-XstqL22tA1EHesm3ccqUO3rW/to=
+
 react-native-safe-area-view@^0.13.0:
   version "0.13.1"
   resolved "https://registry.npm.taobao.org/react-native-safe-area-view/download/react-native-safe-area-view-0.13.1.tgz#834bbb6d22f76a7ff07de56725ee5667ba1386b0"
@@ -5136,6 +5141,11 @@ react-native@0.59.5:
     ws "^1.1.5"
     xmldoc "^0.4.0"
     yargs "^9.0.0"
+
+react-navigation-animated-switch@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.npm.taobao.org/react-navigation-animated-switch/download/react-navigation-animated-switch-0.1.2.tgz#82ce0d06d9636d8e085ea4975525cfb188c42a1c"
+  integrity sha1-gs4NBtljbY4IXqSXVSXPsYjEKhw=
 
 react-navigation-drawer@1.2.1:
   version "1.2.1"
@@ -5271,6 +5281,11 @@ realpath-native@^1.1.0:
   integrity sha1-IAMpT+oj+wZy8kduviL89Jii1lw=
   dependencies:
     util.promisify "^1.0.0"
+
+redux-persist@^5.10.0:
+  version "5.10.0"
+  resolved "https://registry.npm.taobao.org/redux-persist/download/redux-persist-5.10.0.tgz#5d8d802c5571e55924efc1c3a9b23575283be62b"
+  integrity sha1-XY2ALFVx5Vkk78HDqbI1dSg75is=
 
 redux@^4.0.1:
   version "4.0.1"
