@@ -5,7 +5,7 @@
 import * as TYPE from '../action-types'; //把所有的内容都获取，并重新命名为TYPE。TYPE对象中包含了所有导出的信息
 
 export default function todo(state = {
-    data: [],
+    data: ['123'],
     flag: 'all'  //标签切换标识
 }, action) {
     state = JSON.parse(JSON.stringify(state));  //为了防止不直接修改原有的状态信息，把state进行深度克隆

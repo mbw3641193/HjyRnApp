@@ -1,14 +1,20 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,Button} from 'react-native';
+import {Platform, StyleSheet, Text, View,Button,AsyncStorage} from 'react-native';
+import { connect } from 'react-redux';
+import action from '../store/action';
 
-
-export default class HotTab extends Component {
+class HotTab extends Component {
 
   render(){
     return <View style={styles.container}>
-        <Text style={styles.welcome}>{this.props.tabLabel}</Text>
-        <Button title='跳转到详情页' onPress={()=>{
+        <Text style={styles.welcome}>{this.props.home}123</Text>
+        <Button title='跳转到详情页1' onPress={()=>{
             this.props.navigation.navigate('Detail')
+        }}/>
+        <Button title='huoqu state-home' onPress={()=>{
+            console.log(AsyncStorage.getAllKeys());
+            console.log(AsyncStorage.getItem("persist:root"));
+            console.log(AsyncStorage.getItem('mbw'));
         }}/>
     </View>
   }
@@ -25,6 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color:'blue',
     textAlign: 'center',
-    margin: 10,
   },
 });
+
+export default connect(state => ({ ...state.reducer.welcome }), action.welcome)(HotTab);

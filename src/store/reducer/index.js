@@ -8,10 +8,12 @@
 import {combineReducers} from 'redux';
 import vote from './vote';
 import todo from './todo';
+import welcome from './welcome';
 
 let reducer = combineReducers({
     vote,
-    todo
+    todo,
+    welcome
 });
 
 export default reducer;

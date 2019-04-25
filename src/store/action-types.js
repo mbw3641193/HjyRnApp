@@ -13,3 +13,6 @@ export const TODO_FILTER = 'TODO_FILTER';
 //TODO:body
 export const TODO_CHANGE = 'TODO_CHANGE';
 export const TODO_DELETE = 'TODO_DELETE';
+
+//welcome
+export const WELCOME_HOME = 'WELCOME_HOME';

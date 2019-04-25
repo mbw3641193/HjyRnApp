@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, SafeAreaView, ScrollView } from 'react-native';
+import { Platform, StyleSheet, Text, View, SafeAreaView, ScrollView ,AsyncStorage} from 'react-native';
 import { ThemeProvider, Button } from 'react-native-elements';
+import { connect } from 'react-redux';
+import action from '../store/action';
 
 import Swiper from 'react-native-swiper';
 
@@ -11,7 +13,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#9DD6EB',
+        backgroundColor: 'red',
     },
     slide2: {
         flex: 1,
@@ -39,10 +41,25 @@ const styles = StyleSheet.create({
     },
 })
 
-export default class Welcome extends Component {
+class Welcome extends Component {
 
     goHome = () => {
-        this.props.navigation.navigate('Main');
+        
+        if( this.props.home === 0 ){
+            this.props.gotoHome();
+            // console.log(this.props.home);
+            AsyncStorage.setItem('mbw' , '123123') 
+            this.props.navigation.navigate('Main');
+
+        }
+        
+    }
+
+    componentWillMount(){
+        if( this.props.home === 1 ){
+            // console.log(this.props.home);
+            this.props.navigation.navigate('Main');
+        }
     }
 
     componentDidMount() {
@@ -80,4 +97,6 @@ export default class Welcome extends Component {
         );
     }
 }
+
+export default connect(state => ({ ...state.reducer.welcome }), action.welcome)(Welcome);
 

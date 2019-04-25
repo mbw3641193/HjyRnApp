@@ -129,5 +129,15 @@ export default createAnimatedSwitchNavigator({
 },{
     navigationOptions: {
         header: null //禁用 navigation Bar
-    }
+    },
+    transition: (
+      <Transition.Together>
+        <Transition.Out
+          type="fade"
+          durationMs={200}
+          interpolation="easeIn"
+        />
+        <Transition.In type="fade" durationMs={1} />
+      </Transition.Together>
+    ),
 })

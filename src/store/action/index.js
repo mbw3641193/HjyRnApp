@@ -4,10 +4,12 @@
  */
 import vote from './vote';
 import todo from './todo';
+import welcome from './welcome';
 
 let action = {
     vote,
-    todo
+    todo,
+    welcome
 };
 
 export default action;
