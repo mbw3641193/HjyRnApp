@@ -3,7 +3,7 @@ const initialState = {
     name: '小光',
     gender: '男',
   },
-  home: 0,
+  isFirstTime: true,
 };
 
 function reducers(state = initialState, action) {
@@ -20,8 +20,10 @@ function reducers(state = initialState, action) {
       return { userInfo: {} };
 
     case 'WELCOME_HOME':
-      // 清空 store 中的 userInfo 信息
-      return { home: action.homeNum };
+      return { isFirstTime: false };
+
+    case 'WELCOME_OUT':
+      return { isFirstTime: true };
 
     default:
       return state;

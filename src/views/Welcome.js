@@ -45,7 +45,7 @@ class Welcome extends Component {
 
     goHome = () => {
         
-            this.props.gotoHome(1);
+            this.props.firstTimeCome();
             
             // console.log(this.props.home);
             this.props.navigation.navigate('Main');
@@ -55,7 +55,7 @@ class Welcome extends Component {
 
     componentWillMount(){
         console.log(this.props);
-        if( this.props.home === 1 ){
+        if( this.props.isFirstTime == false ){
             // console.log(this.props.home);
             this.props.navigation.navigate('Main');
             
@@ -69,7 +69,7 @@ class Welcome extends Component {
         return (
             <Swiper style={styles.wrapper} loop={false}>
                 <View style={styles.slide1}>
-                    <Text style={styles.text}>Hello Swiper{this.props.home}</Text>
+                    <Text style={styles.text}>Hello Swiper</Text>
                 </View>
                 <View style={styles.slide2}>
                     <Text style={styles.text}>Beautiful</Text>

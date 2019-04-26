@@ -12,7 +12,7 @@ class HotTab extends Component {
             this.props.navigation.navigate('Detail')
         }}/>
         <Button title='reset' onPress={()=>{
-            this.props.gotoHome(0);
+            this.props.firstTimeOut();
         }}/>
     </View>
   }

@@ -10,9 +10,16 @@ export function clearReduxStore() {
   };
 }
 
-export function gotoHome(homeNum){
+export function firstTimeCome(){
   return {    //dispatch需要什么传递什么，这里就返回什么
       type:'WELCOME_HOME',
-      homeNum
   }
 }
+
+export function firstTimeOut(){
+  return {    //dispatch需要什么传递什么，这里就返回什么
+      type:'WELCOME_OUT',
+  }
+}
+
+
