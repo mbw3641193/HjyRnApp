@@ -49,6 +49,7 @@ class Welcome extends Component {
             
             // console.log(this.props.home);
             this.props.navigation.navigate('Main');
+            
 
         
     }

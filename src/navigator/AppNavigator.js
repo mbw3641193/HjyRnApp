@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View ,AsyncStorage} from 'react-native';
 import {
   createStackNavigator,
   createBottomTabNavigator,
@@ -86,10 +86,15 @@ const HomeNavigator = createBottomTabNavigator({
       tabBarIcon: ({ tintColor, focused }) => {
         return <MaterialIcons name={'favorite'} size={26} style={{ color: tintColor }} />
       },
-      tabBarOnPress:(obj)=>{
-        console.log(obj);
+      tabBarOnPress: async (obj)=>{
+        const userData = await AsyncStorage.getItem("persist:root");
+        // console.log(AsyncStorage.getAllKeys());
+        const isLoginData = JSON.parse(JSON.parse(userData).reducers).isLogin;
+        if(isLoginData == true){
+          obj.defaultHandler();
+          return;
+        }
         obj.navigation.navigate('Login');
-        // obj.defaultHandler()
       }
     }
   },

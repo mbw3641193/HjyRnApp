@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View ,Button} from 'react-native';
+import { connect } from 'react-redux';
+import * as action from '../redux/actions';
 
-
-export default class MyIndex extends Component {
+class MyIndex extends Component {
   componentWillMount() {
 
     this.viewDidAppear1 = this.props.navigation.addListener(
       'willFocus',
       (obj) => {
-        console.log(obj);
+        // console.log(obj);
         // this.props.navigation.navigate('Login');
       }
     )
@@ -17,9 +18,10 @@ export default class MyIndex extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>this is MyIndex</Text>
-        <Button title='跳转到Login' onPress={()=>{
-            this.props.navigation.navigate('Login')
+        <Text style={styles.welcome}>登录状态</Text>
+        <Button title='退出登录' onPress={()=>{
+            this.props.logout();
+            this.props.navigation.navigate('HotIndex');
         }}/>
       </View>
     );
@@ -40,3 +42,5 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
+
+export default connect(state => ({ ...state.reducers }),action)(MyIndex);

@@ -4,26 +4,34 @@ const initialState = {
     gender: '男',
   },
   isFirstTime: true,
+  isLogin:false,
 };
 
 function reducers(state = initialState, action) {
   switch (action.type) {
-    case 'SET_USER_INFO':
-      // 合并 userInfo 对象
-      action.userInfo = Object.assign({}, state.userInfo, action.userInfo);
+    // case 'SET_USER_INFO':
+    //   // 合并 userInfo 对象
+    //   action.userInfo = Object.assign({}, state.userInfo, action.userInfo);
 
-      // 更新状态
-      return Object.assign({}, state, { userInfo: action.userInfo });
+    //   // 更新状态
+    //   return Object.assign({}, state, { userInfo: action.userInfo });
 
-    case 'CLEAR_REDUX_STORE':
-      // 清空 store 中的 userInfo 信息
-      return { userInfo: {} };
-
+    // case 'CLEAR_REDUX_STORE':
+    //   // 清空 store 中的 userInfo 信息
+    //   return { userInfo: {} };
+    
     case 'WELCOME_HOME':
-      return { isFirstTime: false };
+    
+      return Object.assign({}, state, { isFirstTime: false });
 
     case 'WELCOME_OUT':
-      return { isFirstTime: true };
+      return Object.assign({}, state, { isFirstTime: true });
+
+    case 'LOGIN_IN':
+      return Object.assign({}, state, { isLogin: true });
+
+    case 'LOGIN_OUT':
+      return Object.assign({}, state, { isLogin: false });
 
     default:
       return state;

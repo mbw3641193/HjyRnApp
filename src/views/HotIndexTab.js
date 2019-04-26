@@ -9,7 +9,9 @@ class HotTab extends Component {
     return <View style={styles.container}>
         <Text style={styles.welcome}>123</Text>
         <Button title='跳转到详情页1' onPress={()=>{
-            this.props.navigation.navigate('Detail')
+            this.props.navigation.navigate('Detail', {
+                isLogin: this.props.isLogin,
+              })
         }}/>
         <Button title='reset' onPress={()=>{
             this.props.firstTimeOut();
