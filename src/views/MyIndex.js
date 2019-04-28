@@ -5,11 +5,11 @@ import * as action from '../redux/actions';
 
 class MyIndex extends Component {
   componentWillMount() {
-
+    console.log('ppppp');
     this.viewDidAppear1 = this.props.navigation.addListener(
       'willFocus',
       (obj) => {
-        // console.log(obj);
+        console.log('aaaaa');
         // this.props.navigation.navigate('Login');
       }
     )

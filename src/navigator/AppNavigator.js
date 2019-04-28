@@ -14,7 +14,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Welcome from '../views/Welcome';
 import HomePage from '../views/HomePage';
 import Login from '../views/Login';
-
+import PasswordHandle from '../views/PasswordHandle';
 
 // 首屏
 import HotIndex from '../views/HotIndex';
@@ -23,12 +23,12 @@ import LoveIndex from '../views/LoveIndex';
 import MyIndex from '../views/MyIndex';
 
 // 主页hot
-import HotIndexTab from '../views/HotIndexTab';
 import Detail from '../views/Detail';
 
 // 主页go
 import GoIndexTab1 from '../views/GoIndexTab1';
 import GoIndexTab2 from '../views/GoIndexTab2';
+import { login_already } from '../redux/actions';
 
 
 
@@ -53,7 +53,7 @@ const GoNavigator = createMaterialTopTabNavigator({ //go页面
 //底部导航堆栈
 const HomeNavigator = createBottomTabNavigator({
   HotIndex: {
-    screen: HotIndexTab,
+    screen: HotIndex,
     navigationOptions: {
       tabBarLabel: '最热',
       tabBarIcon: ({ tintColor, focused }) => {
@@ -90,11 +90,15 @@ const HomeNavigator = createBottomTabNavigator({
         const userData = await AsyncStorage.getItem("persist:root");
         // console.log(AsyncStorage.getAllKeys());
         const isLoginData = JSON.parse(JSON.parse(userData).reducers).isLogin;
-        if(isLoginData == true){
+        const loginAlreadyData = JSON.parse(JSON.parse(userData).reducers).loginAlready;
+        if(isLoginData == true && loginAlreadyData == true){ //已经登录，并且没有关闭app
           obj.defaultHandler();
           return;
+        }else if( isLoginData == true && loginAlreadyData == false ){ //已经登录，并且关闭app重新打开
+          obj.navigation.navigate('PasswordHandle');
+          return;
         }
-        obj.navigation.navigate('Login');
+        obj.navigation.navigate('Login'); // 没有登录
       }
     }
   },
@@ -130,6 +134,7 @@ const MainNavigator = createStackNavigator({
 const MainLoginNavigator = createStackNavigator({
   Primary:MainNavigator,
   Login:Login,
+  PasswordHandle:PasswordHandle
 },
 {
   mode: 'modal',

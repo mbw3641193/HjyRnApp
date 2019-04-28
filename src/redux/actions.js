@@ -34,5 +34,12 @@ export function logout(){
   }
 }
 
+export function login_already(trueOrFalse){
+  return {    
+      type:'LOGIN_ALREADY',
+      trueOrFalse
+  }
+}
+
 
 

@@ -1,10 +1,11 @@
 const initialState = {
-  userInfo: {
-    name: '小光',
-    gender: '男',
-  },
+  // userInfo: {
+  //   name: '小光',
+  //   gender: '男',
+  // },
   isFirstTime: true,
   isLogin:false,
+  loginAlready:false,
 };
 
 function reducers(state = initialState, action) {
@@ -32,6 +33,10 @@ function reducers(state = initialState, action) {
 
     case 'LOGIN_OUT':
       return Object.assign({}, state, { isLogin: false });
+
+    case 'LOGIN_ALREADY':
+      let {trueOrFalse} = action;
+      return Object.assign({}, state, { loginAlready: trueOrFalse });
 
     default:
       return state;

@@ -4,6 +4,7 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 
 export default class LoveIndex extends Component {
   render() {
+    console.log('---------');
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>this is LoveIndex</Text>

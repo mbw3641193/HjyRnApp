@@ -1,19 +1,22 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,Button} from 'react-native';
-import {
-    createStackNavigator,
-    createBottomTabNavigator,
-    createMaterialTopTabNavigator,
-    createSwitchNavigator
-} from 'react-navigation';
-import {createAppContainer} from 'react-navigation';
+import {Platform, StyleSheet, Text, View,Button,AsyncStorage} from 'react-native';
+import { connect } from 'react-redux';
+import * as action from '../redux/actions';
 
-export default class HotIndex extends Component {
+class HotIndex extends Component {
+  componentWillMount(){
+    console.log('123')
+  }
   render(){
     return <View style={styles.container}>
-        <Text style={styles.welcome}>{this.props.tabLabel}</Text>
-        <Button title='跳转到详情页' onPress={()=>{
-            this.props.navigation.navigate('Detail')
+        <Text style={styles.welcome}>123</Text>
+        <Button title='跳转到详情页1' onPress={()=>{
+            this.props.navigation.navigate('Detail', {
+                isLogin: this.props.isLogin,
+              })
+        }}/>
+        <Button title='reset' onPress={()=>{
+            this.props.firstTimeOut();
         }}/>
     </View>
   }
@@ -24,13 +27,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent:'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#f2f2f2',
   },
   welcome: {
     fontSize: 20,
     color:'blue',
     textAlign: 'center',
-    margin: 10,
   },
 });
 
+export default connect(state => ({ ...state.reducers }),action)(HotIndex);

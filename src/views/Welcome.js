@@ -55,7 +55,9 @@ class Welcome extends Component {
     }
 
     componentWillMount(){
+        this.props.login_already(false);
         console.log(this.props);
+        
         if( this.props.isFirstTime == false ){
             // console.log(this.props.home);
             this.props.navigation.navigate('Main');

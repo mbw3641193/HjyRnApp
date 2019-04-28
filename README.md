@@ -47,6 +47,8 @@ yarn add react-navigation-animated-switch
 yarn add redux react-redux
 // npm install --save redux react-redux
 
+yarn add redux-persist //为redux增加持久化功能
+
 ```
 
 #### AXIOS （由于自带的FETCH没有拦截器以及响应超市，所以选择使用第三方的AXIOS）
@@ -70,7 +72,10 @@ yarn add axios
 $ npm i react-native-swiper --save
 ```
 
-
+#### 登录之手势密码
+```
+$ yarn add react-native-gesture-password
+```
 
 ***
 
@@ -92,9 +97,3 @@ react-native link react-native-vector-icons
 ```
 
 
-## 特殊功能实现
-
-> 1. 引导页
-```
-npm install redux-persist --save
-```
