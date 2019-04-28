@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as action from '../redux/actions';
 
 import Swiper from 'react-native-swiper';
+import SplashScreen from 'react-native-splash-screen';
 
 const styles = StyleSheet.create({
     wrapper: {
@@ -57,7 +58,7 @@ class Welcome extends Component {
     componentWillMount(){
         this.props.login_already(false);
         console.log(this.props);
-        
+        SplashScreen.hide();
         if( this.props.isFirstTime == false ){
             // console.log(this.props.home);
             this.props.navigation.navigate('Main');

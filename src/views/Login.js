@@ -10,6 +10,7 @@ class Login extends Component {
         <Text style={{color:'blue',fontSize:20}}>this is Login</Text>
         <Button title='login' onPress={()=>{
             this.props.login();
+            this.props.login_already(true);
             this.props.navigation.navigate('MyIndex');
         }}/>
       </View>
