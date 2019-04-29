@@ -16,6 +16,9 @@ const AppStackNavigatorContainer = createAppContainer(AppNavigator);
 const { persistor, store } = configureStore();
 
 const theme = {
+    colors: {
+        primary: '#ff6c00',
+    },
     Button: {
         titleStyle: {
             color: '#fff',

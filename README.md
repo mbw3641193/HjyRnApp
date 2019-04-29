@@ -13,6 +13,13 @@ react-native run-ios
 npm run start
 ```
 
+## 真机运行需要注意的事项：
+
+> 需要登录自己的Apple ID，并且导出。按照官网指导调试即可，有问题参考
+
+[如何配置React Native真机调试-iOS](https://www.cnblogs.com/yingsmirk/p/5224985.html)
+
+
 
 ## 项目依赖
 
@@ -77,7 +84,24 @@ $ npm i react-native-swiper --save
 $ yarn add react-native-gesture-password
 ```
 
+#### 登录之指纹密码
+
+###### 有问题参考：
+1. [react-native-touch-id官方API](https://github.com/naoufal/react-native-touch-id)
+2. [RN第三方组件之react-native-touch-id](https://www.jianshu.com/p/a8a8e6dc5a82)
+
+```
+yarn add react-native-touch-id
+
+react-native link react-native-touch-id
+```
+
 #### 启动屏
+
+###### 有问题参考： 
+1. [react-native-splash-screen官方API](https://github.com/crazycodeboy/react-native-splash-screen)
+2. [react-native-splash-screen集成实践（ios & android）](https://www.jianshu.com/p/4540ac17dfd4)
+
 ```
 yarn add react-native-splash-screen
 
@@ -106,6 +130,7 @@ react-native link react-native-splash-screen
 @end
 ```
 ***
+
 
 
 
