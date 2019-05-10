@@ -46,10 +46,10 @@ class Welcome extends Component {
 
     goHome = () => {
         
-            this.props.firstTimeCome();
-            
-            // console.log(this.props.home);
-            this.props.navigation.navigate('Main');
+        this.props.firstTimeCome();
+        
+        // console.log(this.props.home);
+        this.props.navigation.navigate('Main');
             
 
         
