@@ -66,9 +66,6 @@ class Welcome extends Component {
         }
     }
 
-    componentDidMount() {
-    }
-
     render() {
         return (
             <Swiper style={styles.wrapper} loop={false}>
