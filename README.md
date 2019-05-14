@@ -157,6 +157,20 @@ react-native link react-native-vector-icons
 #### 占位组件 placeholder
 ```
 yarn add rn-placeholder
+
+//////////
+{/* <Placeholder
+    isReady={isReady}
+    animation="fade"
+    whenReadyRender={() => <ComponentLoaded />}
+    renderLeft={() => <Media hasRadius />}
+    renderRight={() => <Media />}
+    >
+    <Line width="70%" />
+    <Line />
+    <Line />
+    <Line width="30%" />
+</Placeholder> */}
 ```
 
 

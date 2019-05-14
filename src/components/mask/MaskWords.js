@@ -33,7 +33,7 @@ class MaskWords extends Component {
               whenReadyRender={() => <TouchableOpacity style={styles.maskWordslistDetail} key={key}>
               <Image source={item.url}  style={styles.img}  />
               <View style={styles.textBox}>
-                <Text style={styles.text}>{item.subTitle}</Text>
+                <Text style={styles.text} numberOfLines={2}>{item.subTitle}</Text>
               </View>
           </TouchableOpacity>}
 

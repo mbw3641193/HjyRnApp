@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,SafeAreaView} from 'react-native';
+import {Platform, StyleSheet, Text, View,SafeAreaView,ScrollView} from 'react-native';
 import { Header,Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
 import * as action from '../redux/actions';
 import MaskWords from '../components/mask/MaskWords';
-import { ScrollView } from 'react-native-gesture-handler';
 
 class Mask extends Component {
   constructor(){
@@ -46,7 +45,7 @@ class Mask extends Component {
           isReady:true,
         }
       })  
-    }, 1000);
+    }, 2000);
   }
 
   render() {
@@ -54,20 +53,9 @@ class Mask extends Component {
       <Header
         centerComponent={{ text: '面膜财经', style: { color: '#fff',fontSize:16 } }}
       />
-      {/* <Placeholder
-      isReady={isReady}
-      animation="fade"
-      whenReadyRender={() => <ComponentLoaded />}
-      renderLeft={() => <Media hasRadius />}
-      renderRight={() => <Media />}
-      >
-        <Line width="70%" />
-        <Line />
-        <Line />
-        <Line width="30%" />
-      </Placeholder> */}
 
       <ScrollView showsVerticalScrollIndicator={false}>
+
         {/* 金融百词 */}
         <MaskWords
         title={this.state.wordsList.title}
@@ -76,10 +64,10 @@ class Mask extends Component {
         wordsRefresh={this.wordsRefresh}
         />
 
-        <Text style={styles.welcome}>this is Mask</Text>
-        <Text style={styles.welcome}>this is Mask</Text>
-        <Text style={styles.welcome}>this is Mask</Text>
-        <Text style={styles.welcome}>this is Mask</Text>
+        <Text style={styles.welcome}>Waiting...</Text>
+        <Text style={styles.welcome}>Waiting...</Text>
+        <Text style={styles.welcome}>Waiting...</Text>
+        <Text style={styles.welcome}>Waiting...</Text>
       </ScrollView>
     </View>
   }
@@ -94,8 +82,10 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     height:200,
-    backgroundColor:'pink',
-    color:'blue',
+    lineHeight:200,
+    textAlign:'center',
+    backgroundColor:'#ffad71',
+    color:'#ff6c00',
     margin: 10,
   },
 });
