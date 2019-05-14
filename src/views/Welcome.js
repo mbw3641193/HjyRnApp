@@ -58,7 +58,7 @@ class Welcome extends Component {
     componentWillMount(){
         this.props.login_already(false);
         console.log(this.props);
-        SplashScreen.hide();
+        setTimeout(()=>{SplashScreen.hide()}, 3000 )
         if( this.props.isFirstTime == false ){
             // console.log(this.props.home);
             this.props.navigation.navigate('Main');
