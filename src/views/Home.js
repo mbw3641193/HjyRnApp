@@ -12,7 +12,7 @@ import HomeZlb from '../components/home/HomeZlb';
 import HomeXqd from '../components/home/HomeXqd';
 import HomeJXZT from '../components/home/HomeJXZT';
 
-class HotIndex extends Component {
+class Home extends Component {
   constructor() {
     super();
     this.state = {
@@ -322,4 +322,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(state => ({ ...state.reducers }), action)(HotIndex);
+export default connect(state => ({ ...state.reducers }), action)(Home);
