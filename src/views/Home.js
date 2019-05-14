@@ -165,12 +165,12 @@ class HotIndex extends Component {
 
       {/* 滚动事件 */}
       <Animated.ScrollView showsVerticalScrollIndicator={false} onScroll={this.animatedEvent} scrollEventThrottle={16}>
-        
         <Swiper 
         style={styles.wrapper} 
         loop={true}
         showsPagination={false}
         autoplay={true}
+        removeClippedSubviews={false}
         >
           {
             this.state.bannerImg.map((item,key)=>{

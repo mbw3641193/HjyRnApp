@@ -20,7 +20,7 @@ class PasswordHandle extends Component {
                 message: '密码正确'
             });
             this.props.login_already(true);
-            this.props.navigation.navigate('MyIndex');
+            this.props.navigation.navigate('Account');
 
             // your codes to close this view
         } else {

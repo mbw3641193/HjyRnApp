@@ -11,7 +11,7 @@ class Login extends Component {
         <Button title='login' onPress={()=>{
             this.props.login();
             this.props.login_already(true);
-            this.props.navigation.navigate('MyIndex');
+            this.props.navigation.navigate('Account');
         }}/>
       </View>
     );

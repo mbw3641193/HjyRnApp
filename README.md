@@ -79,6 +79,11 @@ yarn add axios
 $ npm i react-native-swiper --save
 ```
 
+###### Swiper 白屏问题解决方法：给组件Swiper添加一个属性即可：
+```
+removeClippedSubviews={false}
+```
+
 #### 登录之手势密码
 ```
 $ yarn add react-native-gesture-password
@@ -147,6 +152,11 @@ yarn add react-native-elements
 yarn add react-native-vector-icons  
 
 react-native link react-native-vector-icons
+```
+
+#### 占位组件 placeholder
+```
+yarn add rn-placeholder
 ```
 
 

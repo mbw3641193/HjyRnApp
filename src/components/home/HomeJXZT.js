@@ -22,14 +22,16 @@ class HomeJXZT extends Component {
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{marginTop:10}}>
         {
           this.props.list.map((item,key)=>{
-            return <ImageBackground
-            key={key} 
-            resizeMode={'cover'}
-            source={item.url} 
-            style={styles.homeJXZTImg}
-            >
-            <Text style={styles.homeJXZTtitle}>{item.text}</Text>
-          </ImageBackground>
+            return <TouchableOpacity key={key}>
+              <ImageBackground
+               
+              resizeMode={'cover'}
+              source={item.url} 
+              style={styles.homeJXZTImg}
+              >
+              <Text style={styles.homeJXZTtitle}>{item.text}</Text>
+            </ImageBackground>
+          </TouchableOpacity>
 
 
           })

@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,SafeAreaView} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 
-export default class GoTab2 extends Component {
-  render(){
+
+export default class Discovery extends Component {
+  render() {
+    console.log('---------');
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>this is GoTab2</Text>
+        <Text style={styles.welcome}>this is Discovery</Text>
       </View>
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {

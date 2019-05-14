@@ -21,7 +21,7 @@ class MyIndex extends Component {
         <Text style={styles.welcome}>登录状态</Text>
         <Button title='退出登录' onPress={()=>{
             this.props.logout();
-            this.props.navigation.navigate('HotIndex');
+            this.props.navigation.navigate('Home');
         }}/>
       </View>
     );
