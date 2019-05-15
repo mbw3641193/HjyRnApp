@@ -10,22 +10,9 @@ class Mask extends Component {
     super();
     this.state = {
       wordsList:{
-        isReady:true,
+        isReady:false,
         title:'金融百词',
-        list:[
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            subTitle:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相'
-          },
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            subTitle:'行为金融学-诺奖得主与国庆大堵车真相'
-          },
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            subTitle:'行为金融学-诺奖得主与国庆大堵车真相'
-          },
-        ]
+        list:[1,2,3]
       }
     }
   }
@@ -45,6 +32,31 @@ class Mask extends Component {
           isReady:true,
         }
       })  
+    }, 2000);
+  }
+
+  componentWillMount(){
+    setTimeout(() => {
+      this.setState({
+        wordsList:{
+          ...this.state.wordsList,
+          isReady:true,
+          list:[
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              subTitle:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相'
+            },
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              subTitle:'行为金融学-诺奖得主与国庆大堵车真相'
+            },
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              subTitle:'行为金融学-诺奖得主与国庆大堵车真相'
+            },
+          ]
+        }
+      })
     }, 2000);
   }
 

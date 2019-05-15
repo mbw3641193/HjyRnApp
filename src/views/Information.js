@@ -11,45 +11,8 @@ class Information extends Component {
     this.state = {
       infoList:{
         loading:false,
-        isReady:true,
-        list:[
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
-            subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
-            time:'3天前'
-          },
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            title:'行为金融学-诺奖得主与国',
-            subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
-            time:'2天前'
-          },
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
-            subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
-            time:'1天前'
-          },
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
-            subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
-            time:'3天前'
-          },
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            title:'行为金融学-诺奖得主与国',
-            subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
-            time:'2天前'
-          },
-          {
-            url:require("../assets/img/homeZlb.jpg"),
-            title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
-            subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
-            time:'1天前'
-          },
-        ]
+        isReady:false,
+        list:[,,,,,,]
       }
     }
   }
@@ -115,6 +78,55 @@ class Information extends Component {
 
         }
       })  
+    }, 2000);
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        infoList:{
+          ...this.state.infoList,
+          isReady:true,
+          list:[
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
+              subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+              time:'3天前'
+            },
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              title:'行为金融学-诺奖得主与国',
+              subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+              time:'2天前'
+            },
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
+              subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+              time:'1天前'
+            },
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
+              subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+              time:'3天前'
+            },
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              title:'行为金融学-诺奖得主与国',
+              subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+              time:'2天前'
+            },
+            {
+              url:require("../assets/img/homeZlb.jpg"),
+              title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
+              subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+              time:'1天前'
+            },
+          ]
+        }
+      })
     }, 2000);
   }
 
