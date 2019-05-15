@@ -14,42 +14,36 @@ class Information extends Component {
         isReady:true,
         list:[
           {
-            id:'1',
             url:require("../assets/img/homeZlb.jpg"),
             title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
             subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
             time:'3天前'
           },
           {
-            id:'2',
             url:require("../assets/img/homeZlb.jpg"),
             title:'行为金融学-诺奖得主与国',
             subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
             time:'2天前'
           },
           {
-            id:'3',
             url:require("../assets/img/homeZlb.jpg"),
             title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
             subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
             time:'1天前'
           },
           {
-            id:'4',
             url:require("../assets/img/homeZlb.jpg"),
             title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
             subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
             time:'3天前'
           },
           {
-            id:'5',
             url:require("../assets/img/homeZlb.jpg"),
             title:'行为金融学-诺奖得主与国',
             subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
             time:'2天前'
           },
           {
-            id:'6',
             url:require("../assets/img/homeZlb.jpg"),
             title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
             subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
@@ -71,7 +65,6 @@ class Information extends Component {
     setTimeout(() => {
       let newList = [
         {
-          id:'7',
           url:require("../assets/img/homeZlb.jpg"),
           title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
           subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
@@ -95,11 +88,22 @@ class Information extends Component {
     setTimeout(() => {
       let newList = [
         {
-          id:'7',
           url:require("../assets/img/homeZlb.jpg"),
           title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
           subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
-          time:'4天前'
+          time:'7天前'
+        },
+        {
+          url:require("../assets/img/homeZlb.jpg"),
+          title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
+          subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+          time:'8天前'
+        },
+        {
+          url:require("../assets/img/homeZlb.jpg"),
+          title:'行为金融学-诺奖得主与国庆大堵车真相诺奖得主与国庆大堵车真相',
+          subTitle:'循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网循环的英文怎么写_循环的英语怎么说及英文单词_例句_沪江网',
+          time:'9天前'
         },
       ]
 
@@ -107,7 +111,7 @@ class Information extends Component {
         infoList:{
           ...this.state.infoList,
           loading:false,
-          list:newList
+          list:[...this.state.infoList.list , ...newList]
 
         }
       })  
@@ -120,7 +124,6 @@ class Information extends Component {
         centerComponent={{ text: '资讯', style: { color: '#fff',fontSize:16 } }}
       />
       <InfoList
-      id={this.state.infoList.id}
       list={this.state.infoList.list}
       isReady={this.state.infoList.isReady}
       loading={this.state.infoList.loading}

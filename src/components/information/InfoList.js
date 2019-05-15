@@ -10,7 +10,7 @@ class InfoList extends Component {
   render() {
     return <FlatList
     data = {this.props.list}
-    // keyExtractor={item => item.id}
+    keyExtractor={(item,key) => key.toString()}
     renderItem={({ item }) => (
       <View style={styles.infoListBox}>
 
@@ -56,6 +56,7 @@ class InfoList extends Component {
       />
       <Text style={styles.footerText}>努力加载中...</Text>
     </View>}
+    onEndReachedThreshold={0.05}
     onEndReached={()=>{
       this.props.loadMoreData();
     }}
