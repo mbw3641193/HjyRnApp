@@ -173,4 +173,11 @@ yarn add rn-placeholder
 </Placeholder> */}
 ```
 
+#### 渐变色 react-native-linear-gradient
+```
+yarn add react-native-linear-gradient
+
+react-native link react-native-linear-gradient
+```
+
 

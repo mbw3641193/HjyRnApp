@@ -5048,6 +5048,11 @@ react-native-gesture-password@^0.3.6:
   dependencies:
     prop-types "^15.6.0"
 
+react-native-linear-gradient@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.npm.taobao.org/react-native-linear-gradient/download/react-native-linear-gradient-2.5.4.tgz#dce133526f5a5510a639af94544f1ed0c984bd1e"
+  integrity sha1-3OEzUm9aVRCmOa+UVE8e0MmEvR4=
+
 react-native-ratings@^6.3.0:
   version "6.3.1"
   resolved "https://registry.npm.taobao.org/react-native-ratings/download/react-native-ratings-6.3.1.tgz#4e4bd87f376423dc62c933f570fc1932c78adaa4"

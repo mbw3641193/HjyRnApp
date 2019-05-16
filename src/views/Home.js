@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Button, FlatList, ScrollView, Animated ,Image,Dimensions,TouchableOpacity} from 'react-native';
+import { Platform, StyleSheet, Text, View, Button, FlatList, ScrollView, Animated ,Image,Dimensions,TouchableOpacity,StatusBar} from 'react-native';
 import { Header,SearchBar,Icon } from 'react-native-elements';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -118,6 +118,7 @@ class Home extends Component {
   
   render() {
     return <View style={styles.container}>
+      <StatusBar barStyle={'light-content'}/>
       <Header
         placement='left'
         centerComponent={
