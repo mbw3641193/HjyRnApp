@@ -5,7 +5,23 @@
 
 
 <p align="center">
-<img src="./src/assets/img/index.gif" />
+<p>0.引导页</p>
+<img src="./src/docs/splash.gif" />
+
+<p>1.首页</p>
+<img src="./src/docs/index.gif" />
+
+<p>2.第二屏</p>
+<img src="./src/docs/mask.gif" />
+
+<p>3.列表页面</p>
+<img src="./src/docs/info.gif" />
+
+<p>4.第四屏</p>
+<img src="./src/docs/discovery.gif" />
+
+<p>5.账户页面</p>
+<img src="./src/docs/account.gif" />
 </p>
 
 
