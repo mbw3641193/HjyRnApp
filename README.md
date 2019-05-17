@@ -3,6 +3,12 @@
 #### 本项目为企业级别项目，虽然开源但是禁止作为商用，如有发现追究责任。
 ###### "react-native": "0.59.5"
 
+
+<p align="center">
+<img src="./src/assets/img/index.gif" />
+</p>
+
+
 ## 启动项目
 ```
 react-native run-ios

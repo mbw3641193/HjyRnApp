@@ -8,7 +8,7 @@ class Login extends Component {
     return (
       <View style={{flex:1,backgroundColor:'#ddd',justifyContent:'center',alignItems:'center'}}>
         <Text style={{color:'blue',fontSize:20}}>this is Login</Text>
-        <Button title='login' onPress={()=>{
+        <Button title='登录' onPress={()=>{
             this.props.login();
             this.props.login_already(true);
             this.props.navigation.navigate('Account');

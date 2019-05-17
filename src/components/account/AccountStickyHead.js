@@ -33,7 +33,7 @@ class AccoundStickyHead extends Component {
         </TouchableOpacity>
         <View style={styles.topBoxPartBar}></View>
         <TouchableOpacity>
-          <AntDesign name={'setting'} size={25} style={{color:'#fff',opacity:.8,marginLeft:15,marginTop:5}}/>
+          <AntDesign name={'setting'} size={25} style={{color:'#fff',opacity:.8,marginLeft:25,marginTop:5}}/>
         </TouchableOpacity>
       </Animated.View>
 
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
     ...ifIphoneX({
         paddingTop: 44
     }, {
-        paddingTop: 20
+        paddingTop: 30,
+        height:76,
     }),
     flexDirection:'row',
   },
