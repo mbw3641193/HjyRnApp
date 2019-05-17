@@ -6,6 +6,8 @@ import { Header,Icon } from 'react-native-elements';
 
 import AccountStickyHead from '../components/account/AccountStickyHead';
 import AccountHead from '../components/account/AccountHead';
+import AccountGrid from '../components/account/AccountGrid';
+import AccountList from '../components/account/AccountList';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -15,6 +17,7 @@ class Account extends Component {
     this.state = {
       y:new Animated.Value(0),
       loading:false,
+      isReady:false,
       scrollHeight:new Animated.Value(0),
       url:require("../assets/img/headimg.png"),
     }
@@ -29,10 +32,12 @@ class Account extends Component {
 
     this.setState({
       loading:true,
+      isReady:false,
     });
     setTimeout(() => {
       this.setState({
         loading:false,
+        isReady:true,
       });
     }, 2000);
   }
@@ -45,6 +50,12 @@ class Account extends Component {
         // this.props.navigation.navigate('Login');
       }
     )
+
+    setTimeout(() => {
+      this.setState({
+        isReady:true,
+      })
+    }, 2000);
   }
 
   componentWillMount(){
@@ -66,51 +77,60 @@ class Account extends Component {
     return <LinearGradient
     start={{x: 0, y: 0.4}} end={{x: 0, y: 1.0}}
     locations={[0,0.4,0.41]}
-    colors={['#ff6c00','#ff6c00', '#fff']}
-    style={styles.linearGradient}>
-    <Animated.ScrollView
-    style={{backgroundColor:'transparent'}}
-    onScroll={this.animatedEvent}
-    scrollEventThrottle={16}
-    stickyHeaderIndices={[0]}
-    refreshControl={
-      <RefreshControl
-        style={{}}
-        title={'refreshing...'}
-        tintColor={'#fff'}
-        titleColor={'#ff6c00'}
-        refreshing={this.state.loading}
-        onRefresh={()=>{
-          this.loadData();
-        }}
-      />
-    }
+    colors={['#ff6c00','#ff6c00', '#f2f2f2']}
     >
-      <AccountStickyHead
-      url={this.state.url}
-      y={this.state.y}
-      />
-
-      <View style={styles.container}>
-        <AccountHead
+      <Animated.ScrollView
+      style={{backgroundColor:'transparent'}}
+      onScroll={this.animatedEvent}
+      scrollEventThrottle={16}
+      stickyHeaderIndices={[0]}
+      refreshControl={
+        <RefreshControl
+          style={{}}
+          title={'refreshing...'}
+          tintColor={'#fff'}
+          titleColor={'#ff6c00'}
+          refreshing={this.state.loading}
+          onRefresh={()=>{
+            this.loadData();
+          }}
+        />
+      }
+      >
+        <AccountStickyHead
         url={this.state.url}
         y={this.state.y}
         />
 
+        <View style={styles.container}>
+          <AccountHead
+          url={this.state.url}
+          y={this.state.y}
+          isReady={this.state.isReady}
+          />
+
+          <AccountGrid
+          isReady={this.state.isReady}
+          />
+
+          <AccountList
+          
+          />
 
 
 
 
-        {/* <Button title='退出登录' onPress={()=>{
-            this.props.logout();
-            this.props.navigation.navigate('Home');
-        }}/> */}
-      </View>
+
+          {/* <Button title='退出登录' onPress={()=>{
+              this.props.logout();
+              this.props.navigation.navigate('Home');
+          }}/> */}
+        </View>
+        
       
-    
-    
+      
 
-</Animated.ScrollView>
+  </Animated.ScrollView>
 </LinearGradient>
 
     
@@ -121,8 +141,7 @@ class Account extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height:1000,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#fff',
     marginTop:-90,
   },
 

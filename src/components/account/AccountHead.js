@@ -26,26 +26,57 @@ class AccoundHead extends Component {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.head}>
+        <View style={{height:50}}>
+          <Placeholder
+          isReady={this.props.isReady}
+          animation="fade"
+
+          whenReadyRender={() => <View style={styles.head}>
           <Image source={this.props.url} resizeMode='cover' style={styles.img}  />
           <View style={styles.text}>
             <Text style={styles.text1}>马博文</Text>
             <Text style={styles.text2}>156******53</Text>
           </View>
+        </View>}
+
+          renderLeft={() => <Media style={{width:50,height:50}} hasRadius />}
+          >
+            <Line width="40%" height={20}/>
+            <Line width="40%"/>
+          </Placeholder>
         </View>
+        
 
         <View style={styles.mainBox}>
-          <View style={styles.topBox}>
-            <TouchableOpacity style={styles.topBoxPart}>
-              <Text style={styles.topText1}>总资产</Text>
-              <Text style={styles.topText2}>495.90</Text>
-            </TouchableOpacity>
-            <View style={styles.topBoxPartBar}></View>
-            <TouchableOpacity style={styles.topBoxPart}>
-              <Text style={styles.topText1}>日收益</Text>
-              <Text style={[styles.topText2,{color:'red'}]}>+0.02</Text>
-            </TouchableOpacity>
-          </View>
+          <Placeholder
+          isReady={this.props.isReady}
+          animation="fade"
+
+          whenReadyRender={() => <View style={styles.topBox}>
+          <TouchableOpacity style={styles.topBoxPart}>
+            <Text style={styles.topText1}>总资产</Text>
+            <Text style={styles.topText2}>495.90</Text>
+          </TouchableOpacity>
+          <View style={styles.topBoxPartBar}></View>
+          <TouchableOpacity style={styles.topBoxPart}>
+            <Text style={styles.topText1}>日收益</Text>
+            <Text style={[styles.topText2,{color:'red'}]}>+0.02</Text>
+          </TouchableOpacity>
+        </View>}
+
+          >
+            <View style={{flexDirection:'row',padding:15,}}>
+            <View style={{flex:1,paddingLeft:10}}>
+              <Line width="40%" height={15}/>
+              <Line width="70%" height={30}/>
+            </View>
+            <View style={{flex:1,paddingLeft:10}}>
+              <Line width="40%" height={20}/>
+              <Line width="70%" height={30}/>
+            </View>
+            </View>
+          </Placeholder>
+          
 
           <View style={styles.bottomBox}>
             <Text style={styles.bottomBoxText}>进入详情查看更多信息</Text>
@@ -73,7 +104,8 @@ const styles = StyleSheet.create({
     }, {
         paddingTop: 20,
         height:206,
-    })
+    }),
+    zIndex:999,
   },
   button:{
     paddingTop:10,
@@ -106,12 +138,6 @@ const styles = StyleSheet.create({
     height:125,
     marginTop:15,
     borderRadius:8,
-    // shadowColor: '#000',
-    // shadowOffset: {
-    //     width: 10,
-    //     height: 50
-    // },
-    // shadowRadius: 10,
   },
   topBox:{
     flexDirection:'row',
@@ -137,7 +163,17 @@ const styles = StyleSheet.create({
   },
   bottomBox:{
     marginTop:9,
-    backgroundColor:'#f9f9f9'
+    backgroundColor:'#f9f9f9',
+    borderBottomLeftRadius:8,
+    borderBottomRightRadius:8,
+    shadowColor:'#000',//设置一个阴影的颜色
+    shadowOpacity: 0.1 ,//阴影的透明度  0~1
+    shadowRadius:10 ,//阴影的扩散程度
+    shadowOffset:{
+      height:20,
+      width:0
+    }//阴影的偏移量
+
   },
   bottomBoxText:{
     lineHeight:40,
